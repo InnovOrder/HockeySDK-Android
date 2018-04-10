@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Debug;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
@@ -172,11 +173,12 @@ public class Util {
                .setContentIntent(pendingIntent)
                .setSmallIcon(iconId);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             return builder.build();
         } else {
             return builder.getNotification();
-        }
+        }*/
+        return builder.getNotification();
     }
 
     public static void sendNotification(Context context, int id, Notification notification, String channelId, CharSequence channelName) {

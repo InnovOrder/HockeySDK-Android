@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
 
 import net.hockeyapp.android.R;
@@ -57,8 +58,8 @@ public class CheckUpdateTaskWithUI extends CheckUpdateTask {
         super.onPostExecute(updateInfo);
 
         if ((updateInfo != null) && (mIsDialogRequired)) {
-            showDialog(mWeakActivity.get(), updateInfo);
         }
+        showDialog(mWeakActivity.get(), updateInfo);
     }
 
     private void showDialog(final Activity activity, final JSONArray updateInfo) {

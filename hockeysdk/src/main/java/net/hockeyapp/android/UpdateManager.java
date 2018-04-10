@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.AsyncTask.Status;
 import android.os.Build;
 import android.text.TextUtils;
+import android.util.Log;
 
 import net.hockeyapp.android.tasks.CheckUpdateTask;
 import net.hockeyapp.android.tasks.CheckUpdateTaskWithUI;
@@ -130,7 +131,7 @@ public class UpdateManager {
             return;
         }
 
-        if ((!checkExpiryDate(weakActivity, listener)) && ((listener != null && listener.canUpdateInMarket()) || !installedFromMarket(weakActivity))) {
+        if (!checkExpiryDate(weakActivity, listener)) {
             startUpdateTask(weakActivity, urlString, appIdentifier, listener, isDialogRequired);
         }
     }
