@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.text.TextUtils;
+import android.util.Log;
 
 import net.hockeyapp.android.BuildConfig;
 import net.hockeyapp.android.Constants;

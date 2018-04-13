@@ -206,7 +206,6 @@ public class UpdateManager {
             Date expiryDate = listener.getExpiryDate();
             result = ((expiryDate != null) && (new Date().compareTo(expiryDate) > 0));
         }
-
         return result;
     }
 

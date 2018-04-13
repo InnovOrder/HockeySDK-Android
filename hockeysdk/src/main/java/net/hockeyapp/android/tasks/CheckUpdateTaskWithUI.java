@@ -63,6 +63,10 @@ public class CheckUpdateTaskWithUI extends CheckUpdateTask {
     }
 
     private void showDialog(final Activity activity, final JSONArray updateInfo) {
+        if (updateInfo == null) {
+            return;
+        }
+
         if ((activity == null) || (activity.isFinishing())) {
             return;
         }
